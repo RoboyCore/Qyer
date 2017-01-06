@@ -6,6 +6,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     private HomeFragment mHomeFragment;
     private DestinationFragment mDestinationFragment;
     private MyFragment mMyFragment;
+    private long currentTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,5 +58,16 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                 break;
         }
         ft.commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+        long l = System.currentTimeMillis();
+        if (l - currentTime < 3000) {
+            super.onBackPressed();
+        }else {
+            Toast.makeText(this, "再按一次退出", Toast.LENGTH_SHORT).show();
+            currentTime = l;
+        }
     }
 }

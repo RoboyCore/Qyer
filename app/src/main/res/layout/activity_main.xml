@@ -16,16 +16,16 @@
       android:orientation="horizontal">
       <RadioButton
           android:id="@+id/main_rb_home"
-          android:text="首页"
+          android:text="@string/main_home"
           style="@style/main_bottom_rb" />
       <RadioButton
           android:id="@+id/main_rb_destination"
           style="@style/main_bottom_rb"
-          android:text="目的地"/>
+          android:text="@string/main_destination"/>
       <RadioButton
           android:id="@+id/main_rb_my"
           style="@style/main_bottom_rb"
-          android:text="我的"/>
+          android:text="@string/main_my"/>
   </RadioGroup>
 
     <FrameLayout
