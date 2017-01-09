@@ -1,11 +1,7 @@
 package mobi.xiaowu.qyer.ui.fragment;
 
 
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import mobi.xiaowu.qyer.R;
 
@@ -13,19 +9,21 @@ import mobi.xiaowu.qyer.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class DestinationFragment extends Fragment {
+public class DestinationFragment extends BaseFragment {
 
 
     public DestinationFragment() {
         // Required empty public constructor
     }
 
+    @Override
+    protected int layoutID() {
+        return R.layout.fragment_destination;
+    }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_destination, container, false);
+    public String getFragmentTitle() {
+        return "";
     }
 
 }

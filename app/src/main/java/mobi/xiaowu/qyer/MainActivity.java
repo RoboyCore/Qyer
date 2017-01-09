@@ -8,13 +8,16 @@ import android.os.Bundle;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import org.json.JSONObject;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import mobi.xiaowu.qyer.ui.activity.BaseActivity;
 import mobi.xiaowu.qyer.ui.fragment.DestinationFragment;
 import mobi.xiaowu.qyer.ui.fragment.HomeFragment;
 import mobi.xiaowu.qyer.ui.fragment.MyFragment;
 
-public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
+public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener {
     @BindView(R.id.main_rg)
     public RadioGroup mRadioGroup;
     private FragmentManager mManager;
@@ -26,9 +29,13 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         init();
+    }
+
+    @Override
+    public int layoutID() {
+        return R.layout.activity_main;
     }
 
     private void init() {

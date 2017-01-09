@@ -17,14 +17,17 @@
       <RadioButton
           android:id="@+id/main_rb_home"
           android:text="@string/main_home"
+          android:drawableTop="@drawable/selector_tab_home"
           style="@style/main_bottom_rb" />
       <RadioButton
           android:id="@+id/main_rb_destination"
           style="@style/main_bottom_rb"
+          android:drawableTop="@drawable/selector_tab_des"
           android:text="@string/main_destination"/>
       <RadioButton
           android:id="@+id/main_rb_my"
           style="@style/main_bottom_rb"
+          android:drawableTop="@drawable/selector_tab_my"
           android:text="@string/main_my"/>
   </RadioGroup>
 
